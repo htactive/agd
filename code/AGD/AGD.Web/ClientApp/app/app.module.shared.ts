@@ -11,6 +11,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { LeftSideBarComponent } from './components/left-side-bar/leftsidebar.component';
 import { AppFooterComponent } from './components/app-footer/appfooter.component';
+import { SparklineComponent } from './components/sparkline/sparkline.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AppFooterComponent } from './components/app-footer/appfooter.component'
         FetchDataComponent,
         HomeComponent,
         LeftSideBarComponent,
-        AppFooterComponent
+        AppFooterComponent,
+        SparklineComponent
     ],
     imports: [
         CommonModule,
