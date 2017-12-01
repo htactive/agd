@@ -1,0 +1,147 @@
+<!-- .page-content-wrapper -->
+<div class="page-content-wrapper">
+    <div class="page-content-inner">
+        <!-- Start .page-content-inner -->
+        <div id="page-header" class="clearfix">
+            <div class="page-header">
+                <h2>Chartjs</h2>
+                <span class="txt">Nice chart plugin.</span>
+            </div>
+            <div class="header-stats">
+                <div class="spark clearfix">
+                    <div class="spark-info"><span class="number">2345</span>Visitors</div>
+                    <sparkline [data-set]="[5,8,10,8,7,12,11,6,13,8,5,8,10,11,7,12,11,6,13,8]"></sparkline>
+                </div>
+                <div class="spark clearfix">
+                    <div class="spark-info"><span class="number">17345</span>Views</div>
+                    <sparkline [data-set]="[12,11,6,13,8,5,8,10,12,11,6,13,8,5,8,10,12,11,6,13,8,5,8]"></sparkline>
+                </div>
+                <div class="spark clearfix">
+                    <div class="spark-info"><span class="number">3700$</span>Sales</div>
+                    <sparkline [data-set]="[19,18,20,17,20,18,22,24,23,19,18,20,17,20,18,22,24,23,19,18,20,17]"></sparkline>
+                </div>
+            </div>
+        </div>
+        <!-- Start .row -->
+        <div class="row">
+            <div class="col-lg-6">
+                <!-- col-lg-6 start here -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Line chart</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas baseChart height="100"
+                                    [datasets]="lineChartData"
+                                    [labels]="lineChartLabels"
+                                    [options]="lineChartOptions"
+                                    [colors]="lineChartColors"
+                                    [legend]="lineChartLegend"
+                                    [chartType]="lineChartType"
+                                    (chartHover)="chartHovered($event)"
+                                    (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            Line chart unfilled
+                            <small>and curved</small>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="line-unfilled-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Pie chart</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="pie-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Radar chart</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="radar-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+            </div>
+            <!-- col-lg-6 end here -->
+            <div class="col-lg-6">
+                <!-- col-lg-6 start here -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Line chart with dots</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="line-dots-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Bar chart</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="bar-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Donut chart</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="donut-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+                    <!-- Start .panel -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Polar area</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="canvas-holder">
+                            <canvas id="polar-chartjs" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .panel -->
+            </div>
+            <!-- col-lg-6 end here -->
+        </div>
+        <!-- End .row -->
+    </div>
+    <!-- End .page-content-inner -->
+</div>
+<!-- / page-content-wrapper -->
