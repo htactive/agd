@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -12,6 +13,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { LeftSideBarComponent } from './components/left-side-bar/leftsidebar.component';
 import { AppFooterComponent } from './components/app-footer/appfooter.component';
 import { SparklineComponent } from './components/sparkline/sparkline.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { SparklineComponent } from './components/sparkline/sparkline.component';
         HomeComponent,
         LeftSideBarComponent,
         AppFooterComponent,
-        SparklineComponent
+        SparklineComponent,
+        ChartComponent
     ],
     imports: [
         CommonModule,
@@ -34,8 +37,10 @@ import { SparklineComponent } from './components/sparkline/sparkline.component';
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'charts', component: ChartComponent },
             { path: '**', redirectTo: 'home' }
-        ])
+        ]),
+        ChartsModule
     ]
 })
 export class AppModuleShared {
