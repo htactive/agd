@@ -1,5 +1,5 @@
 //------------- Dashboard.js -------------//
-$(document).ready(function() {
+function initDashboard() {
 
 	//------------- Sparklines in header stats -------------//
 	$('#spark-visitors').sparkline([5,8,10,8,7,12,11,6,13,8,5,8,10,11,7,12,11,6,13,8], {
@@ -297,4 +297,4 @@ $(document).ready(function() {
     //call hide right sidebar function
     adminObj.hideRightSidebar();
 
-});
+}
