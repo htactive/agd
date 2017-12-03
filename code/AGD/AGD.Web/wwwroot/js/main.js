@@ -26,7 +26,6 @@ window.addEventListener('load', function () {
     FastClick.attach(document.body);
 }, false);
 function initDynamicTheme() {
-
     //Disable certain links
     $('a[href^=#]').click(function (e) {
         e.preventDefault()

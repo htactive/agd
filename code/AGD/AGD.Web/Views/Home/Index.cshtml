@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 <!doctype html>
 <!--[if lt IE 8]><html class="no-js lt-ie8"> <![endif]-->
@@ -36,6 +37,8 @@
     <link rel="icon" href="img/ico/favicon.ico" type="image/png">
     <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
     <meta name="msapplication-TileColor" content="#3399cc" />
+    <base href="~/" />
+
 </head>
 <body>
     <app></app>
@@ -91,7 +94,7 @@
     <script src="plugins/charts/flot/jquery.flot.curvedLines.js"></script>
     <script src="plugins/charts/sparklines/jquery.sparkline.js"></script>
     <script src="plugins/charts/progressbars/progressbar.js"></script>
-    <script src="plugins/charts/chartjs/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
     <script src="plugins/ui/waypoint/waypoints.js"></script>
     <script src="plugins/ui/weather/skyicons.js"></script>
     <script src="plugins/ui/notify/jquery.gritter.js"></script>
@@ -105,6 +108,4 @@
 </html>
 
 <script src="~/dist/vendor.js" asp-append-version="true"></script>
-@section scripts {
-    <script src="~/dist/main-client.js" asp-append-version="true"></script>
-}
+<script src="~/dist/main-client.js" asp-append-version="true"></script>
