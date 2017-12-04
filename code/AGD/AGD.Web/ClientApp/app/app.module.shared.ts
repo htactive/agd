@@ -14,6 +14,7 @@ import { LeftSideBarComponent } from './components/left-side-bar/leftsidebar.com
 import { AppFooterComponent } from './components/app-footer/appfooter.component';
 import { SparklineComponent } from './components/sparkline/sparkline.component';
 import { ChartComponent } from './components/chart/chart.component';
+import { RightSideBarComponent } from './components/right-side-bar/rightsidebar.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ChartComponent } from './components/chart/chart.component';
         FetchDataComponent,
         HomeComponent,
         LeftSideBarComponent,
+        RightSideBarComponent,
         AppFooterComponent,
         SparklineComponent,
         ChartComponent
