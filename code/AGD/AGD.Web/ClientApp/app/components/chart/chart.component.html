@@ -102,19 +102,6 @@
             </div>
             <!-- col-lg-6 end here -->
             <div class="col-lg-6">
-                <!-- col-lg-6 start here -->
-                <div class="panel panel-default toggle panelMove panelClose panelRefresh">
-                    <!-- Start .panel -->
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Line chart with dots</h4>
-                    </div>
-                    <div class="panel-body">
-                        <div class="canvas-holder">
-                            <canvas id="line-dots-chartjs" height="100"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <!-- End .panel -->
                 <div class="panel panel-default toggle panelMove panelClose panelRefresh">
                     <!-- Start .panel -->
                     <div class="panel-heading">
@@ -122,7 +109,12 @@
                     </div>
                     <div class="panel-body">
                         <div class="canvas-holder">
-                            <canvas id="bar-chartjs" height="100"></canvas>
+                            <canvas baseChart height="100"
+                                    [datasets]="barChartData"
+                                    [labels]="barChartLabels"
+                                    [options]="barChartOptions"
+                                    [legend]="false"
+                                    [chartType]="'bar'"></canvas>
                         </div>
                     </div>
                 </div>
@@ -134,7 +126,12 @@
                     </div>
                     <div class="panel-body">
                         <div class="canvas-holder">
-                            <canvas id="donut-chartjs" height="100"></canvas>
+                            <canvas baseChart height="100"
+                                    [data]="donutChartData"
+                                    [labels]="donutChartLabels"
+                                    [options]="donutChartOptions"
+                                    [legend]="false"
+                                    [chartType]="'doughnut'"></canvas>
                         </div>
                     </div>
                 </div>
@@ -146,7 +143,12 @@
                     </div>
                     <div class="panel-body">
                         <div class="canvas-holder">
-                            <canvas id="polar-chartjs" height="100"></canvas>
+                            <canvas baseChart height="120"
+                                    [data]="polarAreaChartData"
+                                    [labels]="polarAreaChartLabels"
+                                    [options]="polarAreaChartOptions"
+                                    [legend]="false"
+                                    [chartType]="'polarArea'"></canvas>
                         </div>
                     </div>
                 </div>
