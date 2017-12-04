@@ -28,6 +28,19 @@ export class ChartComponent {
     radarChartLabels: any[];
     radarChartOptions: any;
 
+    // bar
+    barChartData: any[];
+    barChartLabels: any[];
+    barChartOptions: any;
+
+    // donut
+    donutChartData: any[];
+    donutChartOptions: any;
+    donutChartLabels: any[];
+    // polar Area
+    polarAreaChartLabels: any[];
+    polarAreaChartData: any[];
+
     randNum() {
         return (Math.floor(Math.random() * (1 + 40 - 20))) + 20;
 
@@ -106,6 +119,14 @@ export class ChartComponent {
         this.pieChart();
         // radar chart
         this.radarChart();
+
+        // bar
+        this.barChart();
+        // donut
+        this.donutChart();
+
+        // polar area
+        this.polarArea();
     }
 
     lineUnfilledChart() {
@@ -266,5 +287,95 @@ export class ChartComponent {
             tooltipCornerRadius: 2,
             tooltipTitleFontFamily: "'Roboto'",
         };
+    }
+
+    barChart() {
+        this.barChartLabels = ["January", "February", "March", "April", "May", "June", "July"];
+        let randNum = this.randNum;
+        this.barChartData = [{
+            fillColor: "rgba(186,195,210,0.5)",
+            strokeColor: "rgba(186,195,210,0.3)",
+            highlightFill: "rgba(186,195,210,0.75)",
+            highlightStroke: "rgba(186,195,210,1)",
+            data: [3 + randNum(), 5 + randNum(), 8 + randNum(), 13 + randNum(), 17 + randNum(), 21 + randNum(), 23 + randNum()]
+        },
+        {
+            fillColor: "rgba(96,177,204,0.5)",
+            strokeColor: "rgba(96,177,204,0.3)",
+            highlightFill: "rgba(96,177,204,0.75)",
+            highlightStroke: "rgba(96,177,204,1)",
+            data: [randNum() - 5, randNum() - 2, randNum() - 4, randNum() - 1, randNum() - 3, randNum() - 2, randNum() - 5]
+        }];
+        this.barChartOptions = {
+            responsive: true,
+            scaleShowGridLines: true,
+            scaleGridLineColor: "#bfbfbf",
+            scaleGridLineWidth: 0.2,
+            //bar options
+            barShowStroke: true,
+            barStrokeWidth: 2,
+            barValueSpacing: 5,
+            barDatasetSpacing: 2,
+            //animations
+            animation: {
+                steps: 60,
+                easing: "easeOutQuart"
+            },
+            //scale
+            showScale: true,
+            scaleFontFamily: "'Roboto'",
+            scaleFontSize: 13,
+            scaleFontStyle: "normal",
+            scaleFontColor: "#333",
+            scaleBeginAtZero: true,
+            //tooltips
+            showTooltips: true,
+            tooltipFillColor: "#344154",
+            tooltipFontFamily: "'Roboto'",
+            tooltipFontSize: 13,
+            tooltipFontColor: "#fff",
+            tooltipYPadding: 8,
+            tooltipXPadding: 10,
+            tooltipCornerRadius: 2,
+            tooltipTitleFontFamily: "'Roboto'",
+        };
+
+    }
+
+    donutChart() {
+        this.donutChartData = [300, 50, 100, 40, 120
+
+        ];
+        this.donutChartLabels = ["SEO", "Coding", "Hosting", "Design", "Other"];
+        this.donutChartOptions = {
+            responsive: true,
+            //donut options
+            segmentShowStroke: true,
+            segmentStrokeColor: "#fff",
+            segmentStrokeWidth: 2,
+            percentageInnerCutout: 45, // This is 0 for Pie charts
+            //animations
+            animation: {
+                steps: 100,
+                easing: "easeOutBounce",
+                rotate: true,
+                scale: true
+            },
+            //tooltips
+            showTooltips: true,
+            tooltipFillColor: "#344154",
+            tooltipFontFamily: "'Roboto'",
+            tooltipFontSize: 13,
+            tooltipFontColor: "#fff",
+            tooltipYPadding: 8,
+            tooltipXPadding: 10,
+            tooltipCornerRadius: 2,
+            tooltipTitleFontFamily: "'Roboto'",
+        };
+    }
+
+    polarArea() {
+        this.polarAreaChartLabels = ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'];
+        this.polarAreaChartData = [300, 500, 100, 40, 120];
     }
 }
